@@ -12,12 +12,15 @@
     .home svg {
         bottom: 45px;
     }
+
     .about {
         flex-direction: column;
     }
+
     .about__content {
         padding: 2rem;
     }
+
     .about__description {
         margin-bottom: 4rem;
     }
@@ -109,6 +112,9 @@
         z-index: 99;
     }
 
+    .service {
+        padding: 4rem 1rem;
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -129,9 +135,17 @@
         width: 30rem;
         height: 30rem;
     }
+    .service__wave {
+        display: none;
+    }
+    .service {
+        padding: 7rem 3rem;
+    }
 }
 
 @media screen and (min-width: 350px) {
-
+    .service__wave {
+        display: flex;
+    }
 
 }
