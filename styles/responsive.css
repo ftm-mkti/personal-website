@@ -1,0 +1,126 @@
+@media screen and (max-width: 1200px) {
+
+    .home-content__title {
+        font-size: 4rem;
+    }
+
+    .home__photo {
+        width: 35rem;
+        height: 35rem;
+    }
+
+    .home svg {
+        bottom: -246px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .nav__logo {
+        font-size: 5rem;
+    }
+
+    .ch__direction {
+        flex-direction: column-reverse;
+    }
+
+    .menu__item {
+        margin-right: 2rem;
+    }
+
+    .home-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    .home-content__links {
+        justify-content: center;
+    }
+
+    .home__photo {
+        margin: 0 auto;
+    }
+
+    .home svg {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .menu {
+        background-color: var(--section-bg-color);
+        position: absolute;
+        top: 100%;
+        flex-direction: column;
+        width: 100%;
+        right: 0;
+        left: 0;
+        align-items: center;
+        justify-content: center;
+        transition: all 200ms ease-in;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .menu--open {
+        height: 33rem;
+    }
+
+    .menu__item {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .menu__item:first-child {
+        margin-top: 2rem;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .cover {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 10%);
+        z-index: -1;
+        opacity: 0;
+        transition: all 200ms ease-in;
+    }
+
+    .cover--show {
+        opacity: 1;
+        z-index: 99;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    .home-content__name {
+        font-size: 2.5rem;
+    }
+
+    .home-content__title {
+        font-size: 3.4rem;
+    }
+
+    .app-btn {
+        width: 100%;
+    }
+
+    .home__photo {
+        width: 30rem;
+        height: 30rem;
+    }
+}
+
+@media screen and (min-width: 350px) {
+
+
+}
