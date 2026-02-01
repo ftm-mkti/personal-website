@@ -578,3 +578,53 @@ component
     margin: 0;
 }
 
+/*===================================| portfolio*/
+
+.portfolio{
+    margin-top: 20rem;
+
+}
+.portfolio-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+}
+.portfolio-list__item{
+    padding: 1.2rem 3rem;
+    border-radius: 4rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+.portfolio-list__item--active{
+    color: #fff;
+    background-color: var(--primary-color);
+}
+.portfolio-content{
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity .2s ease-in;
+}
+.portfolio-content--show{
+    height: auto;
+    opacity: 1;
+}
+.portfolio-content__img{
+    width: 100%;
+}
+
+.swiper-pagination{
+    position: static !important;
+    margin-top: 1rem;
+}
+.swiper-pagination-bullet{
+    width: 1.8rem !important;
+    height: 1.8rem !important;
+    border: .3rem solid #BFBEBE !important;
+    background: #fff !important;
+}
+.swiper-pagination-bullet-active{
+    border-color: var(--primary-color) !important;
+}
