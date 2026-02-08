@@ -97,6 +97,12 @@
     .resume-list__icon {
         display: none;
     }
+    .contactus__map{
+        display: none;
+    }
+    .contact{
+        margin-right: auto;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -180,6 +186,9 @@
 
     .service {
         padding: 7rem 3rem;
+    }
+    .footer__wrapper{
+        flex-wrap: wrap;
     }
 }
 

@@ -717,3 +717,114 @@ component
 .app-btn--pink {
     box-shadow: 0 1.5rem 4rem rgb(245 39 108 / 24%);
 }
+
+/*=====================================|contact us*/
+
+.contactus{
+    margin-top: 20rem;
+}
+
+.contactus__wrapper{
+    background-image: url("../images/map.jpg");
+    height: 78rem;
+    padding: 5rem 0;
+}
+.contactus__map{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 100%;
+    background-color: var(--app-bg-color);
+    box-shadow: 0 0 4rem rgba(96,233,255,27%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 35%;
+    left: 20%;
+}
+.contactus__icon{
+    width: 2rem;
+}
+.contact{
+    background-color: var(--app-bg-color);
+    box-shadow: 0 0 4rem rgba(19,182,255,24%);
+    max-width: 55rem;
+    padding: 4.5rem;
+    margin-left: auto;
+}
+.contact__title{
+    font-family: "Poppins Bold";
+    font-size: 3.2rem;
+    color: var(--primary-color);
+    margin: 0;
+}
+.contact__form{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.contact__input{
+    border: none;
+    outline: none;
+    padding: 1.5rem 2.5rem;
+    box-shadow: 0 0 5rem rgba(96,233,255,27%);
+    border-radius: 1rem;
+    color: var(--text-color);
+}
+.contact__input::placeholder{
+    color: inherit;
+}
+.contact__input--textarea{
+    resize: vertical;
+    max-height: 18rem;
+    min-height: 8rem;
+}
+.contact__submit{
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 1.5rem;
+    border-radius: 5rem;
+    font-family: "Poppins SemiBold";
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/*===============================| footer*/
+
+.footer{
+    padding: 2rem 0;
+    background-color: var(--app-bg-color);
+}
+.footer__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer__copy-right{
+    font-family: "Poppins SemiBold";
+    letter-spacing: .4rem;
+}
+.footer__socials{
+    display: flex;
+    gap: 1rem;
+}
+.footer__social{
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 100%;
+    background-color: #1F2935;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer__social:hover{
+    background-color: var(--primary-color);
+}
+.footer__social svg{
+    height: 3rem;
+    width: 3rem;
+    fill: var(--app-bg-color);
+}
