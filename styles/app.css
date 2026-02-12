@@ -9,6 +9,31 @@
     --primary-color: #0ABEAD;
 }
 
+:root.dark-theme {
+    --text-color: #95A5C6;
+    --app-bg-color: #161D26;
+    --section-bg-color: #1F2935;
+}
+
+:root.dark-theme .header,
+:root.dark-theme .home__photo,
+:root.dark-theme .about,
+:root.dark-theme .resume,
+:root.dark-theme .resume-list,
+:root.dark-theme .pricing,
+:root.dark-theme .package {
+    box-shadow: none;
+}
+
+:root.dark-theme .home {
+    background-image: url("../images/shapes/header-shape-dark.svg");
+    background-repeat: no-repeat;
+}
+
+:root.dark-theme .resume-content__title {
+    color: #F57F17;
+}
+
 /*
 
 -- Reset Styles
@@ -24,6 +49,11 @@ ul {
     margin: 0;
 }
 
+.skew-reset {
+    transform: translateZ(0) skewY(6deg);
+}
+
+
 /*
 
 -- App
@@ -37,6 +67,7 @@ body {
     font-family: "Poppins";
     font-size: 1.6rem;
     line-height: 1.5;
+    background-color: var(--app-bg-color);
 }
 
 /*
@@ -114,6 +145,7 @@ component
     position: fixed;
     right: 0;
     left: 0;
+    top: 0;
 }
 
 .nav {
@@ -209,9 +241,10 @@ component
 /*===============================| home*/
 
 .home {
-    padding-top: 12rem;
-    overflow: hidden;
-    position: relative;
+    margin-top: 8rem;
+    background-image: url("../images/shapes/header-shape.svg");
+    background-repeat: no-repeat;
+    background-position: bottom;
     height: 82rem;
 }
 
@@ -278,7 +311,7 @@ component
 /*==========================| about us*/
 
 .about-us {
-    margin-top: 6rem;
+    padding-top: 8rem;
 }
 
 .about {
@@ -361,7 +394,7 @@ component
 /*===========================| services*/
 
 .services {
-    margin-top: 20rem;
+    padding-top: 8rem;
 }
 
 .service {
@@ -375,26 +408,35 @@ component
 
 .service--purple {
     background-color: #8540FF;
+    box-shadow: 0 0 4rem rgba(118, 13, 255, 35%);
+
 }
 
 .service--yellow {
     background-color: #FFC50C;
+    box-shadow: 0 0 4rem rgba(255, 197, 12, 35%);
+
 }
 
 .service--pink {
     background-color: #EC407A;
+    box-shadow: 0 0 4rem rgba(236, 64, 122, 35%);
 }
 
 .service--orange {
     background-color: #FF6331;
+    box-shadow: 0 0 4rem rgba(255, 99, 49, 35%);
+
 }
 
 .service--blue {
     background-color: #13B6FF;
+    box-shadow: 0 0 4rem rgba(19, 182, 255, 35%);
 }
 
 .service--green {
     background-color: #49AF46;
+    box-shadow: 0 0 4rem rgba(73, 175, 70, 35%);
 }
 
 .service__icon {
@@ -420,19 +462,19 @@ component
     z-index: -1;
 }
 
-/*=============================| resume*/
+
+/*
+
+ - Resume Section -
+
+*/
 
 .resume {
-    margin-top: 20rem;
     box-shadow: 0 0 6rem rgb(19 182 255 / 24%);
-    margin-bottom: 10rem;
-    padding: 8rem 0;
-    transform: skewY(-6deg);
+    padding: 6rem 0;
+    transform: translateZ(0) skewY(-6deg);
     background-color: var(--section-bg-color);
-}
-
-.skew-reset {
-    transform: skewY(6deg);
+    margin-top: 15rem;
 }
 
 .resume-list {
@@ -443,12 +485,8 @@ component
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 36rem;
+    min-height: 40rem;
     margin-right: 3rem;
-}
-
-.h-full {
-    height: 100%;
 }
 
 .resume-list::before {
@@ -463,7 +501,7 @@ component
 }
 
 .resume-list__item {
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.5rem;
     display: flex;
     align-items: center;
     position: relative;
@@ -487,6 +525,7 @@ component
     border-radius: 3rem;
     transition: all 0.2s ease-in;
     max-width: 27rem;
+    box-shadow: 0 0 4rem rgba(96, 233, 255, 27%);
 }
 
 .resume-list__item--active {
@@ -507,8 +546,9 @@ component
     font-family: "Poppins SemiBold";
     font-size: 1.8rem;
     margin-left: 2.5rem;
-    transition: all 0.2s ease-in;
+    transition: all 120ms ease-in;
 }
+
 
 .resume-content {
     border-left: .2rem solid var(--primary-color);
@@ -516,7 +556,7 @@ component
     height: 0;
     overflow: hidden;
     opacity: 0;
-    transition: opacity 0.2s ease-in;
+    transition: opacity 120ms ease-in;
 }
 
 .resume-content--show {
@@ -578,66 +618,83 @@ component
     margin: 0;
 }
 
-/*===================================| portfolio*/
 
-.portfolio{
-    margin-top: 20rem;
+/*
 
+ - Portfolio Section -
+
+*/
+
+.portfolio {
+    padding-top: 8rem;
 }
-.portfolio-list{
+
+.portfolio-list {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 4rem;
     flex-wrap: wrap;
+    gap: .5rem;
 }
-.portfolio-list__item{
+
+.portfolio-list__item {
     padding: 1.2rem 3rem;
     border-radius: 4rem;
     cursor: pointer;
-    transition: all 0.2s ease-in;
+    transition: all 120ms ease-in;
 }
-.portfolio-list__item--active{
+
+.portfolio-list__item--active {
     color: #fff;
     background-color: var(--primary-color);
 }
-.portfolio-content{
+
+.portfolio-content {
     height: 0;
     overflow: hidden;
     opacity: 0;
-    transition: opacity .2s ease-in;
+    transition: opacity 120ms ease-in;
 }
-.portfolio-content--show{
+
+.portfolio-content--show {
     height: auto;
     opacity: 1;
 }
-.portfolio-content__img{
+
+.portfolio-content__img {
     width: 100%;
 }
 
-.swiper-pagination{
+.swiper-pagination {
     position: static !important;
     margin-top: 1rem;
 }
-.swiper-pagination-bullet{
+
+.swiper-pagination-bullet {
     width: 1.8rem !important;
     height: 1.8rem !important;
     border: .3rem solid #BFBEBE !important;
     background: #fff !important;
+    opacity: 1 !important;
 }
-.swiper-pagination-bullet-active{
+
+.swiper-pagination-bullet-active {
     border-color: var(--primary-color) !important;
 }
 
-/*===============================| pricing*/
 
+/*
 
+ - Pricing Section -
+
+*/
 .pricing {
-    margin-top: 20rem;
     box-shadow: 0 0 6rem rgb(19 182 255 / 24%);
     padding: 8rem 0 14rem 0;
-    transform: skewY(-6deg);
+    transform: translateZ(0) skewY(-6deg);
     background-color: var(--section-bg-color);
+    margin-top: 15rem;
 }
 
 .package {
@@ -672,6 +729,7 @@ component
 
 .package__body {
     padding: 3rem 0;
+    background-color: var(--app-bg-color);
 }
 
 .package-options {
@@ -718,23 +776,30 @@ component
     box-shadow: 0 1.5rem 4rem rgb(245 39 108 / 24%);
 }
 
-/*=====================================|contact us*/
 
-.contactus{
-    margin-top: 20rem;
+/*
+
+ - Contact us Section -
+
+*/
+
+.contactus {
+    padding-top: 8rem;
 }
 
-.contactus__wrapper{
+.contactus__wrapper {
     background-image: url("../images/map.jpg");
     height: 78rem;
     padding: 5rem 0;
+    position: relative;
 }
-.contactus__map{
+
+.contactus__map {
     width: 6rem;
     height: 6rem;
     border-radius: 100%;
     background-color: var(--app-bg-color);
-    box-shadow: 0 0 4rem rgba(96,233,255,27%);
+    box-shadow: 0 0 4rem rgba(96, 233, 255, 27%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -742,45 +807,54 @@ component
     top: 35%;
     left: 20%;
 }
-.contactus__icon{
+
+.contactus__icon {
     width: 2rem;
 }
-.contact{
-    background-color: var(--app-bg-color);
-    box-shadow: 0 0 4rem rgba(19,182,255,24%);
+
+.contact {
+    background-color: var(--section-bg-color);
+    box-shadow: 0 0 4rem rgba(19, 182, 255, 24%);
     max-width: 55rem;
     padding: 4.5rem;
     margin-left: auto;
 }
-.contact__title{
+
+.contact__title {
     font-family: "Poppins Bold";
     font-size: 3.2rem;
     color: var(--primary-color);
     margin: 0;
 }
-.contact__form{
+
+.contact__form {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     margin-top: 2rem;
 }
-.contact__input{
+
+.contact__input {
     border: none;
     outline: none;
     padding: 1.5rem 2.5rem;
-    box-shadow: 0 0 5rem rgba(96,233,255,27%);
+    box-shadow: 0 0 5rem rgba(96, 233, 255, 27%);
     border-radius: 1rem;
     color: var(--text-color);
+    background-color: var(--app-bg-color);
 }
-.contact__input::placeholder{
+
+.contact__input::placeholder {
     color: inherit;
 }
-.contact__input--textarea{
+
+.contact__input--textarea {
     resize: vertical;
     max-height: 18rem;
     min-height: 8rem;
 }
-.contact__submit{
+
+.contact__submit {
     background-color: var(--primary-color);
     color: #fff;
     border: none;
@@ -792,26 +866,36 @@ component
     cursor: pointer;
 }
 
-/*===============================| footer*/
 
-.footer{
+/*
+
+ - Footer -
+
+*/
+
+.footer {
     padding: 2rem 0;
     background-color: var(--app-bg-color);
 }
-.footer__wrapper{
+
+.footer__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.footer__copy-right{
+
+.footer__copy-right {
     font-family: "Poppins SemiBold";
     letter-spacing: .4rem;
 }
-.footer__socials{
+
+.footer__socials {
     display: flex;
     gap: 1rem;
 }
-.footer__social{
+
+.footer__social,
+.change-theme {
     width: 4.5rem;
     height: 4.5rem;
     border-radius: 100%;
@@ -819,12 +903,20 @@ component
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
-.footer__social:hover{
+
+.footer__social:hover {
     background-color: var(--primary-color);
 }
-.footer__social svg{
+
+.footer__social svg,
+.change-theme svg {
     height: 3rem;
     width: 3rem;
     fill: var(--app-bg-color);
+}
+
+.change-theme svg {
+    fill: #fff;
 }
