@@ -17,36 +17,36 @@
         <nav class="nav">
             <h1 class="nav__logo">WA.</h1>
             <ul class="menu">
-                <li class="menu__item">
-                    <a href="#home" class="menu__link menu__link--active">Home</a>
+                <li data-section="home" class="menu__item menu__item--active">
+                    <a href="#" class="menu__link">Home</a>
                 </li>
-                <li class="menu__item">
-                    <a href="#about-us" class="menu__link">About us</a>
+                <li data-section="about-us" class="menu__item">
+                    <a href="#" class="menu__link">About us</a>
                 </li>
-                <li class="menu__item">
+                <li data-section="resume" class="menu__item">
                     <a href="#" class="menu__link">Resume</a>
                 </li>
-                <li class="menu__item">
-                    <a href="#services" class="menu__link">Services</a>
+                <li data-section="services" class="menu__item">
+                    <a href="#" class="menu__link">Services</a>
                 </li>
-                <li class="menu__item">
+                <li data-section="portfolio" class="menu__item">
                     <a href="#" class="menu__link">Portfolio</a>
                 </li>
-                <li class="menu__item">
+                <li data-section="pricing" class="menu__item">
                     <a href="#" class="menu__link">Pricing</a>
                 </li>
-                <li class="menu__item">
+                <li data-section="contactus" class="menu__item">
                     <a href="#" class="menu__link">Contact</a>
                 </li>
             </ul>
-            <div class="burger-menu">
-                <div class="burger-menu__line"></div>
+            <div class="nav__toggle-icon">
+                <div class="nav__toggle-line"></div>
             </div>
         </nav>
     </div>
 </header>
 <main>
-    <section class="home" id="home">
+    <section id="home" class="home" >
         <div class="container">
             <div class="row ch__direction">
                 <div class="col-12 col-lg-7">
@@ -79,7 +79,7 @@
 <!--        </svg>-->
 
     </section>
-    <section class="about-us" id="about-us">
+    <section id="about-us" class="about-us" >
         <div class="container">
             <div class="section-head">
                 <h3 class="section-head__title">About Us</h3>
@@ -115,7 +115,7 @@
             </div>
         </div>
     </section>
-    <section class="services">
+    <section id="services" class="services">
         <div class="container">
             <div class="section-head">
                 <h3 class="section-head__title">Services</h3>
@@ -235,7 +235,7 @@
             </div>
         </div>
     </section>
-    <section class="resume">
+    <section id="resume" class="resume">
         <div class="container skew-reset">
             <div class="section-head">
                 <h3 class="section-head__title">Resume</h3>
@@ -453,7 +453,7 @@
             </div>
         </div>
     </section>
-    <section class="portfolio">
+    <section id="portfolio" class="portfolio">
         <div class="container">
             <div class="section-head">
                 <h3 class="section-head__title">Portfolio</h3>
@@ -531,7 +531,7 @@
             </div>
         </div>
     </section>
-    <section class="pricing">
+    <section id="pricing" class="pricing">
         <div class="container skew-reset">
             <div class="section-head">
                 <h3 class="section-head__title">Pricing</h3>
@@ -764,7 +764,7 @@
             </div>
         </div>
     </section>
-    <section class="contactus">
+    <section id="contactus" class="contactus">
         <div class="section-head">
             <h3 class="section-head__title">Contact us</h3>
             <p class="section-head__caption">Let's Keep In Touch</p>

@@ -174,23 +174,23 @@ component
 .menu__item:last-child {
     margin-right: 0;
 }
+.menu__item--active {
+    color: var(--primary-color);
+}
 
 .menu__link {
     display: inline-block;
-    color: var(--text-color);
+    color: inherit;
     font-family: "Poppins Medium";
-    transition: color 150ms ease-in;
+    transition: color 120ms ease-in;
 }
 
 .menu__link:hover {
     color: var(--primary-color);
 }
 
-.menu__link--active {
-    color: var(--primary-color);
-}
 
-.burger-menu {
+.nav__toggle-icon {
     display: none;
     width: 5rem;
     height: 5rem;
@@ -199,14 +199,14 @@ component
     cursor: pointer;
 }
 
-.burger-menu__line {
+.nav__toggle-line {
     position: relative;
     transition: all 100ms ease-in;
 }
 
-.burger-menu__line,
-.burger-menu__line::before,
-.burger-menu__line::after {
+.nav__toggle-line,
+.nav__toggle-line::before,
+.nav__toggle-line::after {
     content: " ";
     width: 4.5rem;
     height: 0.4rem;
@@ -214,27 +214,27 @@ component
     border-radius: 2rem;
 }
 
-.burger-menu__line::before {
+.nav__toggle-line::before {
     position: absolute;
     top: 1.2rem;
-    transition: all 150ms ease-in;
+    transition: all 120ms ease-in;
 }
 
-.burger-menu__line::after {
+.nav__toggle-line::after {
     position: absolute;
     bottom: 1.2rem;
-    transition: all 150ms ease-in;
+    transition: all 120ms ease-in;
 }
 
-.nav__toggle-icon--open .burger-menu__line {
+.nav__toggle-icon--open .nav__toggle-line {
     background-color: transparent;
 }
 
-.nav__toggle-icon--open .burger-menu__line::before {
+.nav__toggle-icon--open .nav__toggle-line::before {
     transform: translateY(-1.2rem) rotate(-45deg);
 }
 
-.nav__toggle-icon--open .burger-menu__line::after {
+.nav__toggle-icon--open .nav__toggle-line::after {
     transform: translateY(1.2rem) rotate(45deg);
 }
 
@@ -282,9 +282,6 @@ component
     flex-wrap: wrap;
 }
 
-.home-content__link {
-
-}
 
 .app-btn--orange {
     background-color: #F57F17;
@@ -292,7 +289,7 @@ component
 }
 
 .home__photo {
-    margin-top: 3rem;
+    margin-top: 6rem;
     width: 50rem;
     height: 50rem;
     border-radius: 100%;

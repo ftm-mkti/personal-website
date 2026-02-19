@@ -1,9 +1,9 @@
-const navToggleIcon = document.querySelector('.burger-menu')
-const menu = document.querySelector('.menu')
-const cover = document.querySelector('.cover')
-const resumeListItems = document.querySelectorAll('.resume-list__item')
+// Select Elements && Variables
+const navToggleIcon = document.querySelector('.nav__toggle-icon');
+const menu = document.querySelector('.menu');
+const cover = document.querySelector('.cover');
+const resumeListItems = document.querySelectorAll('.resume-list__item');
 const portfolioListItems = document.querySelectorAll('.portfolio-list__item');
-
 const menuItems = document.querySelectorAll('.menu__item');
 const sections = document.querySelectorAll("main > section");
 const changeThemeBtn = document.querySelector(".change-theme");

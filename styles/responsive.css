@@ -32,12 +32,14 @@
         font-size: 5rem;
     }
 
-    .ch__direction {
-        flex-direction: column-reverse;
-    }
-
     .menu__item {
         margin-right: 2rem;
+    }
+
+    .ch__direction {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
     }
 
     .home-content {
@@ -54,6 +56,8 @@
 
     .home__photo {
         margin: 0 auto;
+        width: 30rem;
+        height: 30rem;
     }
 
     .home svg {
@@ -97,10 +101,12 @@
     .resume-list__icon {
         display: none;
     }
-    .contactus__map{
+
+    .contactus__map {
         display: none;
     }
-    .contact{
+
+    .contact {
         margin-right: auto;
     }
 }
@@ -117,7 +123,7 @@
         left: 0;
         align-items: center;
         justify-content: center;
-        transition: all 200ms ease-in;
+        transition: all 120ms ease-in;
         height: 0;
         overflow: hidden;
     }
@@ -135,7 +141,7 @@
         margin-top: 2rem;
     }
 
-    .burger-menu {
+    .nav__toggle-icon {
         display: flex;
     }
 
@@ -156,6 +162,19 @@
         z-index: 99;
     }
 
+    .home {
+        background-image: unset;
+        height: 75rem;
+    }
+
+    .home__photo {
+        margin: 2rem auto;
+        width: 35rem;
+        height: 35rem;
+    }
+    .about-us {
+        padding: 0;
+    }
     .service {
         padding: 4rem 1rem;
     }
@@ -187,7 +206,8 @@
     .service {
         padding: 7rem 3rem;
     }
-    .footer__wrapper{
+
+    .footer__wrapper {
         flex-wrap: wrap;
     }
 }
